@@ -1,0 +1,6 @@
+Working of Schema
+----------------
+* Schema is a filter 
+* Temporary structure of database
+* manipulate and match
+* match than go forward otherwise return with an error

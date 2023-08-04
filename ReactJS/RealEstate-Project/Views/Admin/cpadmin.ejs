@@ -1,0 +1,49 @@
+<%- include ("adminNav.ejs") %>
+    <%- include ("../Visitor/carousel.ejs") %>
+
+        <div class="container"><br><br><br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <div class="title-box">
+                            <h3>Change Password Here...!!!</h3><br>
+                            <font style="color: blue;"> <%- output %>
+                            </font>
+                            <form method="post" action="/admin/cpadmin">
+                                <div id="errormessage"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                                <label for="opass"></label>
+                                                <div class="input-group" id="show_hide_password">
+                                            <input type="password" name="opass" id="opass" class="form-control form-control-lg form-control-a input-group"
+                                                placeholder="Enter Old Password" data-rule="minlen:4"
+                                                data-msg="Please enter at least 8 chars of subject" >
+                                                        <a style="background-color: #ffffff; width: 50px; text-align: center;" href=""><i style="margin-top: 15px;" class="input-group-addon fa fa-eye-slash " aria-hidden="true"></i></a>
+                                            <div class="validation"></div>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="npass"></label>
+                                            <input type="password" name="npass" id="npass" class="form-control form-control-lg form-control-a"
+                                                placeholder="Enter New Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"
+                                                >
+                                            <div class="validation"></div>
+                                    </div>
+                                        <div class="form-group">
+                                                <label for="cnpass"></label>
+                                            <input type="password" name="cnpass" id="cnpass" class="form-control form-control-lg form-control-a"
+                                                placeholder="Confirm New Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                                            <div class="validation"></div>
+                                        </div>
+                            
+                                        <button type="submit" class="btn btn-success">Change Password</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include ("adminFooter.ejs") %>

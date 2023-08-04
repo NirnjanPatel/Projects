@@ -1,0 +1,156 @@
+<%- include ("../Visitor/nav.ejs") %>
+
+  <!--/ Contact Star /-->
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-t8">
+          <div class="row">
+            <div class="col-md-6" >
+            <h1 class="title-single">Register Here !!!</h1><br>
+            <font style="color: blue;"><%- output %></font>
+              <form method="post" action="/register" >
+                <div id="errormessage"></div>
+                <div class="row" style="border: 1px solid black;padding: 40px; background-color: rgb(243, 255, 240);">
+                  <div class="col-md-12 ">
+                    <div class="form-group" >
+                      <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Enter Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Enter Your Email" data-rule="email" data-msg="Please enter a valid email">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="password" name="password" class="form-control form-control-lg form-control-a" placeholder="Enter Your Password" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input name="mobile" type="text" class="form-control form-control-lg form-control-a"
+                            placeholder="Enter Your Mobile Number" data-rule="minlen:10" data-msg="Please enter a valid Mobile Number">
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                    <select class="form-control form-control-lg form-control-a id="city" name="city" data-rule="select" data-msg="Please select your city">
+                        <option>Select Your City</option>
+                        <option>Indore</option>
+                        <option>Ujjain</option>
+                        <option>Bhopal</option>
+                        <div class="validation"></div>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                      Male <input type="radio" id="gender" name="gender" value="male">
+                      &nbsp;&nbsp;
+                    Female <input type="radio" id="gender" name="gender" value="female" data-rule="minlen:4" data-msg="Please select your city">
+                    &nbsp;&nbsp;
+                    <div class="validation"></div>
+                </div>
+                </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" name="message" cols="45" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-a">Register</button>
+                  </div><br>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3 section-md-t3"  style="margin-left:100px ;margin-top: 100px;">
+              <div class="icon-box section-b2" style="margin-top: 60px;">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-paper-plane"></span>
+                </div>
+                <div class="icon-box-content table-cell" >
+                  <div class="icon-box-title" >
+                    <h4 class="icon-title" >Say Hello</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">Email.
+                      <span class="color-a">contact@example.com</span>
+                    </p>
+                    <p class="mb-1">Phone.
+                      <span class="color-a">+54 356 945234</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-box section-b2">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-pin"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Find us in</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">
+                      Manhattan, Nueva York 10036,
+                      <br> EE. UU.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-redo"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Social networks</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <div class="socials-footer">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-dribbble" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Contact End /-->
+
+<%- include ("../Visitor/footer.ejs") %>

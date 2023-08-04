@@ -1,0 +1,4 @@
+Working of Model
+----------------
+* to send data to database 
+* get from controller and intract data with schema.

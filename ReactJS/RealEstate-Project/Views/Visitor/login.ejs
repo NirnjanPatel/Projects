@@ -1,0 +1,129 @@
+<%- include ("../Visitor/nav.ejs") %>
+
+  <!--/ Contact Star /-->
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-t8">
+          <div class="row">
+            <div class="col-md-6">
+              <font style="color: blue;">
+                <%- output %>
+              </font>
+              <form method="post" action="/login">
+                <div id="errormessage"></div>
+                <div class="row" style="border: 1px solid black;padding: 40px; background-color: rgb(243, 255, 240); margin-top: 60px;">
+                  <h2 style="margin-left: 20px;">Login Here !!!</h2><br><br>
+                  <br><div class="col-md-12">
+                    <div class="form-group">
+                      <label for="email"></label>
+                      <input name="email" type="email" class="form-control form-control-lg form-control-a" id="email" name="email"
+                        placeholder="Enter Your Email" data-rule="email" data-msg="Please enter a valid email" value="<%- cunm %>">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="pwd"></label>
+                      <input type="password"                 id="pwd"
+                name="password"
+                class="form-control form-control-lg form-control-a"
+                        placeholder="Enter Your Password" data-rule="minlen:4"
+                        data-msg="Please enter at least 8 chars of subject"  value="<%- cpass %>">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+            <div class="form-group" >
+              <input style="margin-left:15px ;" type="checkbox" id="chk" value="Remember" name="chk" />&nbsp; <label> Remember Me</label> 
+            </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-a">Login</button>
+                  </div><br>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3 section-md-t3" style="margin-left:100px;margin-top: 40px;">
+              <div class="icon-box section-b2" class="mt-5">
+                <div class="icon-box-icon" style="margin-top: 50px;">
+                  <span class="ion-ios-paper-plane"></span>
+                </div>
+                <div class="icon-box-content table-cell" >
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Say Hello</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">Email.
+                      <span class="color-a">contact@example.com</span>
+                    </p>
+                    <p class="mb-1">Phone.
+                      <span class="color-a">+54 356 945234</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-box section-b2">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-pin"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Find us in</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">
+                      Manhattan, Nueva York 10036,
+                      <br> EE. UU.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-redo"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Social networks</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <div class="socials-footer">
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="link-one">
+                            <i class="fa fa-dribbble" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Contact End /-->
+
+  <%- include ("../Visitor/footer.ejs") %>

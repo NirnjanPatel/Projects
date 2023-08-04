@@ -1,0 +1,11 @@
+Cookie life cycle
+-----------------
+Entire Cookie will be managed in req , res mechanism
+
+                          http req ->
+        Client End  ----------------------  Server End
+                    <- http res + Cookies
+
+                    http req + Cookies ->
+        Client End  ----------------------  Server End
+                    <- http res + Cookies

@@ -1,0 +1,62 @@
+<%- include ("adminheader.ejs") %>
+
+<%- include ("adminnav.ejs") %>
+
+            <!-- About Start -->
+            <div class="about wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 col-md-12">
+<div class="about-text">
+<h2>View & Manage Users</h2>
+<table class="table table-bordered">
+<tr>
+<th>ID</th>
+<th>Name</th>    
+<th>Email</th>
+<th>Mobile</th>
+<th>Address</th>
+<th>City</th>
+<th>Gender</th>
+<th>Info</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+<% for(let row of userDetails) { %>
+<tr>
+<td><%- row._id %></td>
+<td><%- row.name %></td>    
+<td><%- row.email %></td>
+<td><%- row.mobile %></td>
+<td><%- row.address %></td>
+<td><%- row.city %></td>
+<td><%- row.gender %></td>
+<td><%- row.info %></td>
+<td>
+<% if(row.status) { %>
+<a href="/admin/manageuserstatus?s=block&regid=<%- row._id %>" style="color:orange;">
+    Block User
+</a>
+<% } else { %>
+<a href="/admin/manageuserstatus?s=verify&regid=<%- row._id %>" style="color:green;">
+    Verify User
+</a>    
+<% } %>        
+</td>
+<td>
+<a href="/admin/manageuserstatus?s=delete&regid=<%- row._id %>" style="color:red;">
+    Delete
+</a>    
+</td>
+<% } %>    
+</table>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+<%- include ("adminfooter.ejs") %>            
+
+

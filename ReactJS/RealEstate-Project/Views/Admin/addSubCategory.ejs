@@ -1,0 +1,42 @@
+<%- include ("adminNav.ejs") %>
+
+        <div class="container"><br><br><br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrap d-flex justify-content-between">
+                        <div class="title-box">
+                            
+                            <h2 class="title-a">Add Sub Category Here</h2>
+                            <font style="color: blue;">
+                                <%- output %>
+                            </font>
+                            <form method="post" action="/admin/addsubcategory" enctype="multipart/form-data">
+                                <div class="form-group ">
+                                    <label for="catname"></label>
+                                        <select class="form-control" id="catname" name="catname">
+                                            <option>Select Category</option>
+                                            <% for(let row of clist) { %>
+                                                <option>
+                                                    <%- row.catname %>
+                                                </option>
+                                                <% } %>
+                                        </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <input name="subcatname" type="text" id="subcatname" class="form-control form-control-lg form-control-a"
+                                        placeholder="Enter Sub Category Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="caticon" id="caticon"
+                                        class="form-control form-control-lg form-control-a"
+                                        placeholder="Choose an File">
+                                </div><br>
+                                <button type="submit" class="btn btn-a">Add Sub Category</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include ("adminFooter.ejs") %>

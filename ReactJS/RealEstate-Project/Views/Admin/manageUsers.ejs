@@ -1,0 +1,50 @@
+<%- include ("adminNav.ejs") %>
+    <%- include ("../Visitor/carousel.ejs") %>
+    <div class="container"><br><br><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap d-flex justify-content-between">
+                    <div class="title-box">
+                        <h3 ">View & Manage Users</h3><br><br>
+                        <table border="2px" cellpadding="5" cellspacing="5">
+                            <tr>
+                                <th>ID</th>
+                                <th> Name </th>
+                                <th> Email </th>
+                                <th> Mobile </th>
+                                <th> Address </th>
+                                <th> City </th>
+                                <th> Gender </th>
+                                <th> Info </th>
+                                <th> Status </th>
+                                <th> Activity </th>
+                            </tr>
+                            <% for(let row of userDetails) { %>
+                            <tr>
+                                <td><%- row._id %></td>
+                                <td><%- row.name %></td>
+                                <td><%- row.email %></td>
+                                <td><%- row.mobile %></td>
+                                <td><%- row.message %></td>
+                                <td><%- row.city %></td>
+                                <td><%- row.gender %></td>
+                                <td><%- row.info %></td>
+                                <td>
+                                <% if(row.status) { %>
+                                <a href="/admin/manageuserstatus?s=block&regid=<%- row._id %>" style="color: orange;"> Block User</a>
+                                <% } else { %>
+                                <a href="/admin/manageuserstatus?s=verify&regid=<%- row._id %>" style="color: green;"> Verify User</a>
+                                <% } %>
+                                </td>
+                                <td>
+                                <a href="/admin/manageuserstatus?s=delete&regid=<%- row._id %>" style="color: red;"> Delete User</a>
+                                </td>
+                            </tr>
+                            <% } %>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <%- include ("adminFooter.ejs") %>
